@@ -21,7 +21,7 @@ const Projects = () => {
       technologies: ["React", "Firebase", "Material-UI"],
       image: project2Image,
       liveLink: "#",
-      githubLink: "#"
+      githubLink: "https://github.com/mbakama/task-manager-app"
     },
     {
       title: "Tableau de Bord Météo",
