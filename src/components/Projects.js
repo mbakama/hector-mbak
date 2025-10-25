@@ -28,8 +28,8 @@ const Projects = () => {
       description: "Une application météo responsive qui fournit les conditions actuelles et les prévisions en utilisant des APIs externes avec de belles visualisations de données.",
       technologies: ["JavaScript", "Chart.js", "API Météo"],
       image: project3Image,
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://app-met.netlify.app/",
+      githubLink: "https://github.com/mbakama/meteo"
     }
   ];
 
