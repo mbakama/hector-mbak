@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="social-links">
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/mbakama" target="_blank" rel="noopener noreferrer">
           <img src={githubIcon} alt="GitHub" style={{ width: '20px', marginRight: '5px' }} />
           GitHub
         </a>

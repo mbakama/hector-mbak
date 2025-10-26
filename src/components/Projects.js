@@ -18,7 +18,7 @@ const Projects = () => {
     {
       title: "Application de Gestion de Tâches",
       description: "Une application collaborative de gestion de tâches avec mises à jour en temps réel, fonctionnalité glisser-déposer et fonctionnalités de collaboration d'équipe.",
-      technologies: ["React", "Firebase", "Material-UI"],
+      technologies: ["React", "Firebase", "Bootstrap 5"],
       image: project2Image,
       liveLink: "#",
       githubLink: "https://github.com/mbakama/task-manager-app"
