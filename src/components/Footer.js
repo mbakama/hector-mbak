@@ -20,7 +20,7 @@ const Footer = () => {
           Email
         </a>
       </div>
-      <p>&copy; 2024 Hector Mbakama. Tous droits réservés.</p>
+      <p>&copy; {new Date().getFullYear()} Hector Mbakama. Tous droits réservés.</p>
     </footer>
   );
 };
