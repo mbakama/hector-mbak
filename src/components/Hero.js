@@ -1,80 +1,53 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "Bonjour, je suis Hector Mbakama",
-      subtitle: "Développeur Full Stack & Résolveur de Problèmes Créatif",
-      description: "Passionné par la création d'expériences web exceptionnelles"
-    },
-    {
-      title: "Innovation & Créativité",
-      subtitle: "Transformant les idées en réalité digitale",
-      description: "Spécialisé dans Angular, React, Laravel et les technologies modernes"
-    },
-    {
-      title: "Collaboration & Excellence",
-      subtitle: "Construisant l'avenir du web ensemble",
-      description: "Toujours prêt pour de nouveaux défis et projets passionnants"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
-    <section id="home" className="hero">
-      <div className="hero-carousel">
-        <div className="carousel-container">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
+    <section
+      id="home"
+      className="shell min-h-[80vh] flex flex-col justify-center relative pt-28 pb-16 overflow-hidden"
+    >
+      {/* Background watermark — fitted to first viewport */}
+      <div
+        className="pointer-events-none select-none absolute right-0 top-24 z-0 flex h-[calc(80vh-6rem)] items-center pr-3 md:pr-8"
+        aria-hidden="true"
+      >
+        <span
+          className="font-tech leading-none tracking-[0.12em] text-on-surface/[0.12] whitespace-nowrap [writing-mode:vertical-rl] rotate-180"
+          style={{ fontSize: 'clamp(1.25rem, calc((80vh - 8rem) / 12), 3.75rem)' }}
+        >
+          SYSTEM_v4.0
+        </span>
+      </div>
+
+      <div className="asymmetric-grid w-full relative z-10">
+        <div className="col-span-12 md:col-span-10 lg:col-span-8">
+          <p className="font-tech text-tech-label text-primary mb-4 uppercase tracking-widest opacity-80">
+            Fullstack TypeScript // Angular, React, NestJS, Laravel, Next.js
+          </p>
+          <h1 className="font-display text-[40px] sm:text-[64px] md:text-display leading-none mb-8 tracking-tighter">
+            HECTOR <span className="text-primary italic">MBAKAMA</span>
+            <span className="cursor-blink" aria-hidden="true" />
+          </h1>
+          <p className="font-sans text-body-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+            Développeur Fullstack basé à Kinshasa avec plus de 3 ans
+            d&apos;expérience dans le développement d&apos;applications web
+            modernes. Passionné par les architectures logicielles, je conçois
+            des solutions robustes et évolutives en utilisant Angular, NestJS,
+            Laravel, TypeScript, PHP, SQL et Docker, dans des environnements
+            Agile (Scrum/Kanban).
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a href="#projects" className="btn-primary">
+              Voir les projets
+            </a>
+            <a
+              href={`/cv-hector-mbakama.pdf?v=${Date.now()}`}
+              download="Hector-Mbakama-CV.pdf"
+              className="btn-ghost"
             >
-              <div className="hero-content">
-                <h1>{slide.title}</h1>
-                <p className="hero-subtitle">{slide.subtitle}</p>
-                <p className="hero-description">{slide.description}</p>
-                <a href="#about" className="cta-button">En savoir plus sur moi</a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <button className="carousel-btn prev-btn" onClick={prevSlide}>
-          &#8249;
-        </button>
-        <button className="carousel-btn next-btn" onClick={nextSlide}>
-          &#8250;
-        </button>
-
-        <div className="carousel-dots">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentSlide ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
+              Télécharger CV
+            </a>
+          </div>
         </div>
       </div>
     </section>

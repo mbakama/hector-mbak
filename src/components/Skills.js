@@ -1,41 +1,45 @@
 import React from 'react';
 
 const Skills = () => {
-  const skillCategories = [
+  const categories = [
     {
-      title: "Développement Frontend",
-      skills: ["React", "JavaScript", "HTML5 & CSS3", "Angular", "TypeScript"]
+      label: '_FRONTEND',
+      skills: ['Angular / React', 'TypeScript', 'Next.js', 'HTML5 / CSS3 / SASS', 'RxJS', 'Tailwind CSS'],
     },
     {
-      title: "Développement Backend",
-      skills: ["Node.js", "Python", "Express.js", "FAST API", "PHP", "Laravel", "APIs REST"]
+      label: '_BACKEND',
+      skills: ['NestJS / Node.js', 'Laravel', 'API REST / GraphQL', 'JWT', 'TypeORM / Prisma'],
     },
     {
-      title: "Base de données & Outils",
-      skills: ["Sql Server", "PostgreSQL", "MySql", "Git", "Docker",  "Firebase"]
+      label: '_DATA_&_DEVOPS',
+      skills: ['PostgreSQL / MySQL', 'SQL Server', 'Docker', 'GitLab CI/CD', 'GitHub Actions'],
     },
     {
-      title: "Design & Autres",
-      skills: ["Design UI/UX", "Figma", "Design Responsive", "Agile", "Tests", "DevOps"]
-    }
+      label: '_MÉTHODES',
+      skills: ['SOLID / Clean Code', 'Jest / Cypress', 'Scrum / Kanban', 'Jira / Azure DevOps', 'Confluence / Notion'],
+    },
   ];
 
   return (
-    <section id="skills" className="section skills">
-      <h2>Compétences & Technologies</h2>
-      <div className="skills-grid">
-        {skillCategories.map((category, index) => (
-          <div key={index} className="skill-card">
-            <h3>{category.title}</h3>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              {category.skills.map((skill, skillIndex) => (
-                <li key={skillIndex} style={{ 
-                  padding: '0.3rem 0', 
-                  color: '#666',
-                  borderBottom: skillIndex < category.skills.length - 1 ? '1px solid #eee' : 'none'
-                }}>
-                  {skill}
-                </li>
+    <section id="skills" className="shell section-block">
+      <div className="mb-20">
+        <h2 className="section-label">
+          <span className="num">03/</span> COMPÉTENCES
+        </h2>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        {categories.map((category) => (
+          <div
+            key={category.label}
+            className="border border-outline-variant/20 p-8 hover:border-primary/50 transition-colors"
+          >
+            <p className="font-tech text-code-sm text-primary mb-4">
+              {category.label}
+            </p>
+            <ul className="space-y-2 text-body-sm text-on-surface-variant list-none p-0 m-0">
+              {category.skills.map((skill) => (
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
           </div>

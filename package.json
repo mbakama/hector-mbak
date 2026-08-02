@@ -13,7 +13,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "generate:cv": "python scripts/generate_cv.py",
+    "prestart": "npm run generate:cv",
     "start": "react-scripts start",
+    "prebuild": "npm run generate:cv",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^3.4.19"
   }
 }
