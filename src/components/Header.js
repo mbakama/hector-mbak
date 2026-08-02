@@ -9,6 +9,7 @@ const Header = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
     { href: '#skills', label: 'Skills' },
+    { href: '#certifications', label: 'Certs' },
     { href: '#contact', label: 'Contact' },
   ];
 

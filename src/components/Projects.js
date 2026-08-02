@@ -1,9 +1,9 @@
 import React from 'react';
 import draftlioImage from '../assets/images/draftlio.png';
 import amaniImage from '../assets/images/amani.png';
-import project1Image from '../assets/images/project1.svg';
-import project2Image from '../assets/images/project2.svg';
-import project3Image from '../assets/images/project3.svg';
+import bahaiCommunityImage from '../assets/images/bahai-community.png';
+import erpDgiImage from '../assets/images/erp-dgi.png';
+import erecettesImage from '../assets/images/erecettes.png';
 import unipilotImage from '../assets/images/unipilot.png';
 
 const Projects = () => {
@@ -28,22 +28,36 @@ const Projects = () => {
     },
     {
       title: 'ERP-DGI',
-      meta: 'Gestion Fiscale Intégrée',
+      meta: 'Gestion Fiscale Intégrée — Projet d’équipe',
       description:
-        'Système intégré de gestion fiscale : modules de contrôle et d’exonération, interfaces Angular reliées aux services backend, optimisation des requêtes SQL Server.',
-      technologies: ['Angular', 'Laravel', 'SQL Server'],
-      image: project2Image,
+        'Système intégré de gestion fiscale développé en équipe. Contribution sur plusieurs modules métier (contrôle fiscal, exonérations), avec une architecture microservices (Java, Laravel, FastAPI/Python) et une interface Angular, ainsi que l’optimisation des requêtes SQL Server.',
+      technologies: [
+        'Angular',
+        'Java',
+        'Laravel',
+        'FastAPI',
+        'Python',
+        'SQL Server',
+      ],
+      image: erpDgiImage,
       status: 'BUILD: STABLE',
       href: '#projects',
       align: 'right',
     },
     {
       title: 'eRecettes (DGRK)',
-      meta: 'Recettes Publiques',
+      meta: 'Recettes Publiques — Projet d’équipe',
       description:
-        'Plateforme de gestion des recettes publiques : processus métier (contribuables, patrimoines), APIs REST, intégration front/back en environnement Agile Scrum.',
-      technologies: ['Angular', 'NestJS', 'Laravel', 'SQL Server'],
-      image: project3Image,
+        'Plateforme de gestion des recettes publiques développée en équipe. Contribution sur 5 modules métier, avec une architecture microservices (Java, Laravel, FastAPI/Python) et une interface Angular, en environnement Agile Scrum.',
+      technologies: [
+        'Angular',
+        'Java',
+        'Laravel',
+        'FastAPI',
+        'Python',
+        'SQL Server',
+      ],
+      image: erecettesImage,
       status: 'STATUS: DEPLOYED',
       href: 'https://erecettes.cd/#/',
       align: 'left',
@@ -83,7 +97,7 @@ const Projects = () => {
         'PrimeNG',
         'Tailwind',
       ],
-      image: project1Image,
+      image: bahaiCommunityImage,
       status: 'STATUS: IN DEV',
       href: 'https://github.com/mbakama/bahai-community',
       align: 'right',

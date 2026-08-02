@@ -18,7 +18,7 @@ const Contact = () => {
     <section id="contact" className="shell section-block border-t border-outline-variant/20">
       <div className="mb-12">
         <h2 className="section-label">
-          <span className="num">04/</span> CONTACT
+          <span className="num">05/</span> CONTACT
         </h2>
       </div>
 

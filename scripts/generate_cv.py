@@ -214,14 +214,14 @@ def build():
         (
             "ERP-DGI — Système intégré de gestion fiscale",
             None,
-            "Angular, Laravel, SQL Server",
-            "Modules de contrôle et d'exonération, UI Angular, optimisation SQL Server.",
+            "Angular, Java, Laravel, FastAPI, Python, SQL Server",
+            "Projet d'équipe : contribution sur plusieurs modules métier (contrôle fiscal, exonérations). Architecture microservices (Java, Laravel, FastAPI/Python) et interface Angular, optimisation SQL Server.",
         ),
         (
             "eRecettes (DGRK) — Gestion des recettes publiques",
             "https://erecettes.cd/#/",
-            "Angular, NestJS, Laravel, SQL Server",
-            "Processus métier contribuables/patrimoines, APIs REST, environnement Agile Scrum.",
+            "Angular, Java, Laravel, FastAPI, Python, SQL Server",
+            "Projet d'équipe : contribution sur 5 modules métier. Architecture microservices (Java, Laravel, FastAPI/Python) et interface Angular, en Agile Scrum.",
         ),
         (
             "UniPilot — SaaS de gestion universitaire multi-tenant",
@@ -247,6 +247,28 @@ def build():
         story.append(Paragraph(label, job_title))
         story.append(Paragraph(f"Technologies : {tech}", meta))
         story.append(Paragraph(desc, body))
+
+    story.extend(section_title("CERTIFICATIONS"))
+    story.append(Paragraph("Basics of Python", job_title))
+    story.append(
+        Paragraph(
+            "UniAthena × Cambridge International Qualifications (CIQ)  |  21 juillet 2026",
+            meta,
+        )
+    )
+    story.append(
+        Paragraph("Certificat vérifié blockchain — ID 5296-8648-4462", body)
+    )
+    story.append(Paragraph("Basics of Digital Marketing", job_title))
+    story.append(
+        Paragraph(
+            "UniAthena × Cambridge International Qualifications (CIQ)  |  28 juillet 2026",
+            meta,
+        )
+    )
+    story.append(
+        Paragraph("Certificat vérifié blockchain — ID 4162-7192-8983", body)
+    )
 
     story.extend(section_title("COMPÉTENCES"))
     story.append(

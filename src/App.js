@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Projects />
         <Experience />
         <Skills />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
